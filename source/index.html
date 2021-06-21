@@ -1,0 +1,47 @@
+
+
+<html>
+	<head>
+  <title> slide images</title>
+ <link rel="stylesheet" href="style.css">
+	</head>
+<body>
+	
+
+<section>
+	<h1> IMAGES </h1>
+<script >
+	var i=0;
+	var images=[];
+	var time = 2000;
+	// images list 
+	images[0] = '1.jpg';
+	images[1] = '2.jpg';
+	images[2] = '3.jpg';
+	images[3] = '4.jpg';
+	images[4] = '5.jpg';
+	images[5] = '6.jpg';
+	images[6] = '7.jpg';
+	
+
+	//change images
+	function changeImag(){
+		document.slide.src= images[i];
+		if (i < images.length - 1) {
+			i++;
+
+		} else{
+			i=0;
+		}
+
+		setTimeout("changeImag()" , time);
+	}
+
+	window.onload=changeImag;
+</script>
+
+<img name="slide" width="400" height="200">
+</section>
+</body>
+
+</html>
